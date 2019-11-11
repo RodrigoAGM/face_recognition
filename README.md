@@ -64,6 +64,6 @@ Finally, you can test the results running any of the following implementations:
 python identify_face_camera.py
 ```
 ```
-(Face recognition with an image)
+(Face recognition with an image, to make this work you need to add a abc.jpg image)
 python identify_face_image.py
 ```
