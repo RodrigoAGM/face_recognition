@@ -1,5 +1,12 @@
-# face_recognition
-Face recognition module designied for Vote4Me
+# Vote 4 Me - EVoting based in blockchain
+## Face Recognition Module
+---
+
+<div align="center">
+  <img src="https://hackernoon.com/drafts/57e73zmx.png"/>
+</div>
+
+---
 
 ## Getting Started
 
