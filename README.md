@@ -46,6 +46,10 @@ Person2 name
     ...
 ...
 ```
+To do that easily, just run the faces.py file, insert your name and the program with save some pictures of you using your camera.
+```
+python faces.py
+```
 
 After that, the only thing you need to do is to start running the project. The first step is to preprocess the data, so:
 ```
