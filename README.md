@@ -58,7 +58,7 @@ Person2 name
     ...
 ...
 ```
-To do that easily, just run the faces.py file, insert your name and the program with save some pictures of you using your camera.
+To do that easily, just run the faces.py file, insert your name and the program will save some pictures of you using your camera.
 ```
 python faces.py
 ```
