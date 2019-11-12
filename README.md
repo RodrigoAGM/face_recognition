@@ -36,7 +36,7 @@ git clone https://github.com/vot4me/face_recognition.git
 
 Then go to the cloned folder and you are ready!
 ```
-cd deeplens-web
+cd face_recognition
 ```
 
 ### Run the project
