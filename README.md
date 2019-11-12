@@ -28,6 +28,11 @@ pip install pillow
 pip install scikit-learn
 pip install opencv-python
 ```
+To do this easily just run:
+```
+pip install -r requirements.txt
+```
+
 
 After that, you should download a copy of the project to start running it. To do so, go to your git bash and do
 ```
