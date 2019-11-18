@@ -9,6 +9,7 @@ import os
 import time
 import pickle
 import sys
+import webbrowser
 
 img_path='abc.jpg'
 modeldir = './model/20170511-185253.pb'
@@ -142,6 +143,9 @@ with tf.Graph().as_default():
                                 result_names = HumanNames[best_class_indices[0]]
                                 cv2.putText(videoFrame, result_names, (text_x, text_y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
                                             1, (0, 0, 255), thickness=1, lineType=2)
+                                google = result_names
+                                webbrowser.open_new_tab('http://www.google.com/search?btnG=1&q=%s' % google)
+                                sys.exit("Face recognized :" + result_names)
                                 
                     else:
                         cv2.rectangle(videoFrame, (x, y), (end_cord_x, end_cord_y), (0,0,255), stroke)
