@@ -19,17 +19,6 @@ First make sure you have installed the following version of Python:
 ```
 python 3.5.x
 ```
-
-After that, you should download a copy of the project to start running it. To do so, go to your git bash and do
-```
-git clone https://github.com/vot4me/face_recognition.git
-```
-
-Then go to the cloned folder and you are ready!
-```
-cd face_recognition
-```
-
 Then install the needed resources:
 ```
 pip install tensorflow
@@ -44,6 +33,16 @@ To do this easily just run:
 pip install -r requirements.txt
 ```
 
+
+After that, you should download a copy of the project to start running it. To do so, go to your git bash and do
+```
+git clone https://github.com/vot4me/face_recognition.git
+```
+
+Then go to the cloned folder and you are ready!
+```
+cd face_recognition
+```
 
 ### Run the project
 
