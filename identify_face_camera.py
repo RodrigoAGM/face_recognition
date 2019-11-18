@@ -85,7 +85,7 @@ with tf.Graph().as_default():
             nrof_faces = bounding_boxes.shape[0]
             print('Face Detected: %d' % nrof_faces)
 
-            if nrof_faces > 0:
+            if nrof_faces > 0 and nrof_faces < 2:
                 det = bounding_boxes[:, 0:4]
                 img_size = np.asarray(frame.shape)[0:2]
                 cropped = []
@@ -125,19 +125,28 @@ with tf.Graph().as_default():
                     # print(best_class_indices)
                     best_class_probabilities = predictions[np.arange(len(best_class_indices)), best_class_indices]
                     print(best_class_probabilities)
-                    #plot result idx under box
-                    text_x = bb[i][0]
-                    text_y = bb[i][3] + 20
 
-                    print('Result Indices: ', best_class_indices[0])
-                    print(HumanNames)
-                    for H_i in HumanNames:
-                        # print(H_i)
-                        if HumanNames[best_class_indices[0]] == H_i:
-                            result_names = HumanNames[best_class_indices[0]]
-                            cv2.rectangle(videoFrame, (x, y), (end_cord_x, end_cord_y), color, stroke)
-                            cv2.putText(videoFrame, result_names, (text_x, text_y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
-                                        1, (0, 0, 255), thickness=1, lineType=2)
+                    if(best_class_probabilities > 0.95):
+
+                        cv2.rectangle(videoFrame, (x, y), (end_cord_x, end_cord_y), color, stroke)
+
+                        #plot result idx under box
+                        text_x = bb[i][0]
+                        text_y = bb[i][3] + 20
+
+                        print('Result Indices: ', best_class_indices[0])
+                        print(HumanNames)
+                        for H_i in HumanNames:
+                            # print(H_i)
+                            if HumanNames[best_class_indices[0]] == H_i:
+                                result_names = HumanNames[best_class_indices[0]]
+                                cv2.putText(videoFrame, result_names, (text_x, text_y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
+                                            1, (0, 0, 255), thickness=1, lineType=2)
+                                
+                    else:
+                        cv2.rectangle(videoFrame, (x, y), (end_cord_x, end_cord_y), (0,0,255), stroke)
+                        cv2.putText(videoFrame, "Unknown", (text_x, text_y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
+                                            1, (0, 0, 255), thickness=1, lineType=2)
             else:
                 print('Unable to align')
             
