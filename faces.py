@@ -10,7 +10,7 @@ eye_cascade = cv2.CascadeClassifier('cascades/haarcascade_eye.xml')
 smile_cascade = cv2.CascadeClassifier('cascades/haarcascade_smile.xml')
 counter = 0
 
-print("What's your name? ")
+print("What's your ID number? ")
 name = input()
 
 directory = "train_img/"+name
