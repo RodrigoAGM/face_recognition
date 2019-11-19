@@ -149,7 +149,7 @@ with tf.Graph().as_default():
                                 
                     else:
                         cv2.rectangle(videoFrame, (x, y), (end_cord_x, end_cord_y), (0,0,255), stroke)
-                        cv2.putText(videoFrame, "Unknown", (text_x, text_y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
+                        cv2.putText(videoFrame, "Unknown", (x, y), cv2.FONT_HERSHEY_COMPLEX_SMALL,
                                             1, (0, 0, 255), thickness=1, lineType=2)
             else:
                 print('Unable to align')
