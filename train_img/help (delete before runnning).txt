@@ -1,0 +1,2 @@
+Insert training images here
+name the containing folder with the name of the person
